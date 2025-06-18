@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Glass Contact Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: url('https://images.unsplash.com/photo-1537511446984-935f663eb1f4?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+      min-height: 100vh;
+    }
+
+    /* ✅ NAVBAR FIX */
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: black;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 2em;
+      color: white;
+      letter-spacing: 2px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: white;
+      padding: 5px 15px;
+      font-size: 18px;
+    }
+
+    .register a {
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      background: indianred;
+      border-radius: 8px;
+      padding: 6px 16px;
+    }
+
+    /* ✅ FORM POSITIONING */
+    .form-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding-top: 80px; /* space for navbar */
+    }
+
+    .glass-form {
+      width: 360px;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #fff;
+    }
+
+    .glass-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: black;
+    }
+
+    .glass-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+      color: black;
+    }
+
+    .glass-form input,
+    .glass-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      background: rgba(255, 255, 255, 0.25);
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+    }
+
+    .glass-form input::placeholder,
+    .glass-form textarea::placeholder {
+      color: black;
+    }
+
+    .glass-form button {
+      width: 30%;
+      padding: 10px;
+      background-color: rgba(0, 123, 255, 0.7);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .glass-form button:hover {
+      background-color: rgba(0, 123, 255, 0.9);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ FIXED NAV -->
+  <nav>
+    <div class="logo">COCKPIT</div>
+    <div class="menu">
+      <a href="main.html">Home</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="about.html">About Us</a>
+    </div>
+    <div class="register">
+      <a href="#">Register</a>
+    </div>
+  </nav>
+
+  <!-- ✅ FORM CENTERED BELOW NAV -->
+  <div class="form-container">
+    <div class="glass-form">
+      <h2>Contact Us</h2>
+      <form>
+        <label for="fname">First Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your first name" required>
+
+        <label for="fname">Last Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your last name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Write your message..." required></textarea>
+
+        <button type="submit" style="float: right;">Send</button>
+        <button type="reset" style="float: left;">Reset</button>
+        
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
